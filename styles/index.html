@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fisasystem</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="scripts/remodal.css">
+    <link rel="stylesheet" href="scripts/remodal-default-theme.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="scripts\iziToast\css\iziToast.css">
+    <script src="scripts\iziToast\js\iziToast.js" type="text/javascript"></script>
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/jquery.tabslet.js"></script>
+    <script src="scripts/remodal.min.js"></script>
+    <script src="scripts/custom.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <div class="flex fullHeight">
+
+        <!-- Natigation bar -->
+        <div class="navigationBar">
+            <div class="navigationBarSectionsTabs">
+                <ul class="sections">
+                    <li class="user">
+                        <a href="#dashboardSide" class="user"><img src="./assets/ic_person_24px@2x.png"></a>
+                        <ul class="over-menu purple-menu" style="display: none">
+                            <li>Preferencias</li>
+                            <li>Usuarios</li>
+                            <li>Cerrar sesión</li>
+                        </ul>
+                    </li>
+
+                    <li class="separator active">
+                        <a class="tooltip" data-tooltip="Dashboard" href="#dashboardSide"><img src="./assets/ic_dashboard_24px@2x.png" alt="" data-hover="./assets/ic_dashboard_24px@2x_purple.png" data-offhover="./assets/ic_dashboard_24px@2x.png"></a>
+                    </li>
+                    <li class="modules">
+                        <a href="#modulesSide" class="tooltip moduleSide" data-tooltip="Módulos"><img src="./assets/ic_view_agenda_24px.png" alt="" data-hover="./assets/ic_view_agenda_24px@2x_purple.png" data-offhover="./assets/ic_view_agenda_24px@2x.png"></a>
+                    </li>
+                    <li class="separator">
+                        <a class="tooltip" data-tooltip="Transacciones más usadas" href="#dashboardSide"><img src="./assets/ic_star_24px@2x.png" alt="" data-hover="./assets/ic_star_24px@2x_purple.png" data-offhover="./assets/ic_star_24px@2x.png"></a>
+                    </li>
+                    <li>
+                        <a class="tooltip" data-tooltip="Generales" href="#dashboardSide"><img src="./assets/ic_check_box_24px@2x.png" alt="" data-hover="./assets/ic_check_box_24px@2x_purple.png" data-offhover="./assets/ic_check_box_24px@2x.png"></a>
+                    </li>
+                    <li>
+                        <a class="tooltip" data-tooltip="Clientes" href="#dashboardSide"><img src="./assets/ic_person_24px@2x.png" alt="" data-hover="./assets/ic_person_24px@2x_purple.png" data-offhover="./assets/ic_person_24px@2x.png"></a>
+                    </li>
+                    <li>
+                        <a class="tooltip" data-tooltip="Caja y Servicios" href="#dashboardSide"><img src="./assets/ic_poll_24px@2x.png" alt="" data-hover="./assets/ic_poll_24px@2x_purple.png" data-offhover="./assets/ic_poll_24px@2x.png"></a>
+                    </li>
+                    <li>
+                        <a class="tooltip" data-tooltip="Captaciones Vista" href="#dashboardSide"><img src="./assets/ic_insert_drive_file_24px@2x.png" alt="" data-hover="./assets/ic_insert_drive_file_24px@2x_purple.png" data-offhover="./assets/ic_insert_drive_file_24px@2x.png"></a>
+                    </li>
+                    <li>
+                        <a class="tooltip" data-tooltip="Captaciones a Plazo" href="#dashboardSide"><img src="./assets/ic_today_24px@2x.png" alt="" data-hover="./assets/ic_today_24px@2x_purple.png" data-offhover="./assets/ic_today_24px@2x.png"></a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="options">
+                <ul class="">
+                    <li class="separator">
+                        <a href="" class="tooltip" data-tooltip="Agregar Módulo"><img src="./assets/ic_add_circle_outline_24px@2x.png" alt="" data-hover="./assets/ic_add_circle_outline_24px_purple@2x.png" data-offhover="./assets/ic_add_circle_outline_24px@2x.png"></a>
+                    </li>
+                    <li>
+                        <a class="tooltip" data-tooltip="Agenda" href=""><img src="./assets/calendar-recomendado@2x.png" alt="" data-hover="./assets/calendar-recomendado-purple@2x.png" data-offhover="./assets/calendar-recomendado@2x.png"></a>
+                    </li>
+                    <li class="separator">
+                        <a class="tooltip" data-tooltip="Preferencias" href=""><img src="./assets/setting-recomendado@2x.png" alt="" data-hover="./assets/setting-recomendado@2x_purple.png" data-offhover="./assets/setting-recomendado@2x.png"></a>
+                    </li>
+                    <li>
+                        <a href="login.html"><img src="./assets/baseline-input-24px@2x.png" alt="" data-hover="./assets/logout-to-app-button@2x_purple.png" data-offhover="./assets/baseline-input-24px@2x.png"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a id="toggleSidebar"><span><img src="./assets/Group 3407.png"></span></a>
+            <div class="dark flex betweenV" id="dashboardSide">
+                <div>
+                    <div class="flex betweenH">
+                        <div>Jairo Martínez</div>
+                        <div>
+                            <a href="#help"><img src="./assets/help.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <h1>Bienvenido</h1>
+                </div>
+                <div>
+                    <div>
+                        <h2>Nueva Versión</h2>
+                        <p>Nueva versión de FISA System permite a los usuarios una mejor experiencia y fácil acceso a las transacciones más usadas según el rol</p>
+                        <a href="" style="margin-bottom: 60px;">Conoce más</a>
+
+                        <a href="#configuration"><img src="./assets/setting-recomendado.png" alt=""> Configurar dashboard</a>
+                    </div>
+                    <p class="muted">Versión 3.8. FISA System.</p>
+                </div>
+
+
+            </div>
+            <div class="dark flex betweenV" id="depositoSide">
+                <div>
+                    <div class="flex betweenH">
+                        <div>Jairo Martínez</div>
+                        <div>
+                            <a href="#help"><img src="./assets/help.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <h1>Depósito</h1>
+                </div>
+                <div>
+                    <div>
+                        <h2>Accesos</h2>
+                        <p>FISA System permite el acceso por teclado a todas las funcionalidades y opciones al sistema.</p>
+                        <a href="#soporte" style="margin-bottom: 60px;"><img src="./assets/keyboard.png" alt=""> Conoce más</a>
+                    </div>
+                    <p class="muted">Versión 3.8. FISA System.</p>
+                </div>
+            </div>
+            <div class="dark flex betweenV" id="modulesSide">
+
+                <div class="menu-primer-nivel">
+                    <!-- <span class="right"><a href="#" class="close">X</a></span> -->
+                    <div>Módulos</div>
+                    <div>
+                        <ol>
+                            <li><a href="#">Generales</a></li>
+                            <li><a href="#">Clientes</a></li>
+                            <li><a href="#">Caja y Servicios</a></li>
+                            <li><a href="#">Captaciones Vista</a></li>
+                            <li><a href="#">Captaciones a Plazo</a></li>
+                            <li><a href="#">Colocaciones</a></li>
+                            <li><a href="#">Establecimientos</a></li>
+                            <li><a href="#">Tarjetas</a></li>
+                            <li><a href="#">Producto Definible</a></li>
+                            <li><a href="#">Comercio Exterior</a></li>
+                            <li><a href="#">Mesa de Dinero</a></li>
+                            <li><a href="#">Servicios</a></li>
+                            <li><a href="#">Externos</a></li>
+                            <li><a href="#">Tarjeta de Débito</a></li>
+                            <li><a href="#">Nómina</a></li>
+                            <li><a href="#">Inf. Management Syst.</a></li>
+                            <li><a href="#">Check Clearing</a></li>
+                            <li><a href="#">Proceso de Documento</a></li>
+                            <li><a href="#">Contabilidad</a></li>
+                            <li><a href="#">Tarjetas</a></li>
+                            <li><a href="#">Producto Definible</a></li>
+                            <li><a href="#">Comercio Exterior</a></li>
+                            <li><a href="#">Mesa de Dinero</a></li>
+                            <li><a href="#">Servicios</a></li>
+                            <li><a href="#">Externos</a></li>
+                            <li><a href="#">Tarjeta de Débito</a></li>
+                            <li><a href="#">Nómina</a></li>
+                            <li><a href="#">Inf. Management Syst.</a></li>
+                            <li><a href="#">Check Clearing</a></li>
+                            <li><a href="#">Proceso de Documento</a></li>
+                            <li><a href="#">Contabilidad</a></li>
+                            <li><a href="#">Tarjetas</a></li>
+                            <li><a href="#">Producto Definible</a></li>
+                            <li><a href="#">Comercio Exterior</a></li>
+                            <li><a href="#">Mesa de Dinero</a></li>
+                            <li><a href="#">Servicios</a></li>
+                            <li><a href="#">Externos</a></li>
+                            <li><a href="#">Tarjeta de Débito</a></li>
+                            <li><a href="#">Nómina</a></li>
+                            <li><a href="#">Inf. Management Syst.</a></li>
+                            <li><a href="#">Check Clearing</a></li>
+                            <li><a href="#">Proceso de Documento</a></li>
+                            <li><a href="#">Contabilidad</a></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="menu-segundo-nivel" style="display: none">
+                    <div> Captaciones Vista</div>
+                    <div>
+                        <ol>
+                            <li><a href="">Depósitos</a></li>
+                            <li><a href="">Retiro Multiple con Libreta</a></li>
+                            <li><a href="">Retiro S/Libreta/Depjud</a></li>
+                            <li><a href="">Pago Cheque Propio por Ventanilla</a></li>
+                            <li><a href="">Pago Cheque por Cámara</a></li>
+                            <li><a href="">Certifiación Cheque en Efectivo</a></li>
+                            <li><a href="">Certifiación Cheque Débito</a></li>
+                            <li><a href="">Retiro Múltiple Saldo Cierre</a></li>
+                            <li><a href="">Retiro Mult.Sal.Cierre con Libreta</a></li>
+                            <li><a href="">Actualización de Libreta</a></li>
+                            <li><a href="">Nota Crédito Justificada Protesto</a></li>
+                            <li><a href="">Nota Débito Revocatoria Cheque</a></li>
+                            <li><a href="">Cheque Devuelto Falta Fondos</a></li>
+                            <li><a href="">Nota Débito Cierre de Cuenta</a></li>
+                            <li><a href="">Cheque Devuelto Otras Causas</a></li>
+                            <li><a href="">Pago Cheque Certificado Ventanilla</a></li>
+                            <li><a href="">Pago Cheque Certificado Cámara</a></li>
+                            <li><a href="">Pago Cheque Propio Rec en Déposito</a></li>
+                            <li><a href="">NOTA CREDITO LEV. REVOCATORIA</a></li>
+                            <li><a href="">CHEQUE CERTIFICADO RECIBIDO</a></li>
+                            <li><a href="">Depósitos</a></li>
+                            <li><a href="">Retiro Multiple con Libreta</a></li>
+                            <li><a href="">Retiro S/Libreta/Depjud</a></li>
+                            <li><a href="">Pago Cheque Propio por Ventanilla</a></li>
+                            <li><a href="">Pago Cheque por Cámara</a></li>
+                            <li><a href="">Certifiación Cheque Efectivo</a></li>
+                            <li><a href="">Certifiación Cheque Débito</a></li>
+                            <li><a href="">Retiro Múltiple Saldo Cierre</a></li>
+                            <li><a href="">Retiro Mult.Sal.Cierre con Libreta</a></li>
+                            <li><a href="">Actualización de Libreta</a></li>
+                            <li><a href="">Nota Crédito Justificada Protesto</a></li>
+                            <li><a href="">Nota Débito Revocatoria Cheque</a></li>
+                            <li><a href="">Cheque Devuelto Falta Fondos</a></li>
+                            <li><a href="">Nota Débito Cierre de Cuenta</a></li>
+                            <li><a href="">Cheque Devuelto Otras Causas</a></li>
+                            <li><a href="">Pago Cheque Certificado Ventanilla</a></li>
+                            <li><a href="">Pago Cheque Certificado Cámara</a></li>
+                            <li><a href="">Pago Cheque Propio Rec en Déposito</a></li>
+                            <li><a href="">NOTA CREDITO LEV. REVOCATORIA</a></li>
+                            <li><a href="">CHEQUE CERTIFICADO RECIBIDO</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Article Area -->
+        <div class="article">
+            <header class="flex betweenH">
+                <div class="search-bar">
+                    <input type="search" name="" id="" placeholder="Buscar módulo o transacción">
+                    <ul class="over-menu search-dropdown purple-menu" style="display: none">
+                        <li>Nota de Débito General</li>
+                        <li>Nota de Crédito General</li>
+                    </ul>
+                    16:59
+                    <span class="time">|</span> Mar 14, Nov 2018
+                </div>
+                <div><img src="./assets/logo@2x.png" class="logo" alt=""></div>
+            </header>
+            <div class="generalContentTabs">
+
+                <!-- Nav tabs -->
+                <ul class="etabs">
+                    <li class="tab active"><a href="#dashboard" data-target="#dashboardSide" class="active">Dashboard</a></li>
+                    <li class="tab"><a href="#deposito" data-target="#depositoSide">Depósito 1</a></li>
+                    <li class="add submenu"><a href="">+</a></li>
+                    <ul class="over-menu green-menu" style="display: none">
+                        <li><a href="#">Depósito</a></li>
+                        <li><a href="">Transferencia</a></li>
+                        <li><a href="">Retiro</a></li>
+                    </ul>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="contentTab" id="dashboard">
+                    <div class="grid">
+                        <div class="panel">
+                            <div class="header">
+                                <h3>Transacciones más usadas</h3>
+                                <a href="#">⠇</a>
+                                <ul>
+                                    <li><a href="#">Editar</a></li>
+                                    <li><a href="#">Eliminar</a></li>
+                                </ul>
+                            </div>
+                            <div class="flex buttons">
+                                <a href=""><img src="./assets/depositos@2x.png" alt=""> Depósitos
+                                </a>
+                                <a href=""><img src="./assets/transferencias@2x.png" alt=""> Transferencias
+                                </a>
+                                <a href=""><img src="./assets/retiros@2x.png" alt=""> Retiros
+                                </a>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="header">
+                                <h3>Transacciones recientes</h3>
+                                <a href="#">⠇</a>
+                                <ul>
+                                    <li><a href="#">Editar</a></li>
+                                    <li><a href="#">Eliminar</a></li>
+                                </ul>
+                            </div>
+                            <table class="table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="left">Transacción</th>
+                                        <th class="left">Tipo operación</th>
+                                        <th class="left">Cuenta</th>
+                                        <th class="right">Valor neto</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>151821</td>
+                                        <td>Depósito</td>
+                                        <td>Otto</td>
+                                        <td class="right mount">2,494.95</td>
+                                    </tr>
+                                    <tr>
+                                        <td>158376</td>
+                                        <td>Transferencia</td>
+                                        <td>Thornton</td>
+                                        <td class="right mount">1,999.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td>158379</td>
+                                        <td>Larry</td>
+                                        <td>Depósito</td>
+                                        <td class="right mount">599.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td>158372</td>
+                                        <td>Larry</td>
+                                        <td>Depósito</td>
+                                        <td class="right mount">150.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>158372</td>
+                                        <td>Larry</td>
+                                        <td>Depósito</td>
+                                        <td class="right mount">150.00</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4"> 4 transacciones en total</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="card">
+                            <div class="image" style="background-image: url('./assets/support.png')">
+                                <h3>Soporte</h3>
+                            </div>
+                            <div>
+                                <div class="header">
+                                    <a href="#">⠇</a>
+                                    <ul>
+                                        <li><a href="#">Editar</a></li>
+                                        <li><a href="#">Eliminar</a></li>
+                                    </ul>
+                                </div>
+                                <p>
+                                    Consulta la ayuda de acceso por teclado a las funciones y opciones del sistema. Es una fácil guía para optimizar el tiempo de las transacciones.
+                                    <a href="#soporte" style="margin-bottom: 60px;">Conoce más</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image" style="background-image: url('./assets/news.png')">
+                                <h3>Novedades</h3>
+                            </div>
+                            <div>
+                                <div class="header">
+                                    <a href="#">⠇</a>
+                                    <ul>
+                                        <li><a href="#">Editar</a></li>
+                                        <li><a href="#">Eliminar</a></li>
+                                    </ul>
+                                </div>
+                                <p>
+                                    La nueva versión de FISA System permite a los usuarios una mejor experiencia y fácil acceso a las transacciones más usadas según su rol.
+                                    <a href="#news" style="margin-bottom: 60px;">Conoce más</a>
+
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="contentTab depositosTabs" id="deposito">
+                    <ul class="breadcrumb">
+                        <li><a tab="#datos">Depósito</a></li>
+                        <li><a tab="#datos">Datos</a></li>
+                        <li><a tab="#desglose-monedas" style="display: none">Desglose de Monedas</a></li>
+                        <li><a tab="#desglose-cheques" style="display: none">Desglose de Cheques</a></li>
+                    </ul>
+
+                    <div id="datos">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="w30"><label for="">Cuenta Cliente</label>
+                                        <input type="text" class="valid" name="" id="">
+                                    </td>
+                                    <td class="w30"><label for="">Tipo de Cuenta</label>
+                                        <input type="text" name="" id="" class="gray">
+                                    </td>
+                                    <td class="w30"><label for="">Titular de la Cuenta</label>
+                                        <select>
+                                                        <option value="Option1">Option 1</option>
+                                                        <option value="Option2">Option 2</option>
+                                                        <option value="Option3">Option 3</option>
+                                                        <option value="Option4">Option 3</option>
+                                                    </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="">Número</label>
+                                        <input type="text" class="error" name="" id="">
+                                    </td>
+                                    <td><label for="">Moneda</label>
+                                        <input type="text" name="" id="" class="gray">
+                                    </td>
+                                    <td><label for="">Departamento</label>
+                                        <select>
+                                                        <option value="Option1">Option 1</option>
+                                                        <option value="Option2">Option 2</option>
+                                                        <option value="Option3">Option 3</option>
+                                                        <option value="Option4">Option 3</option>
+                                                    </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <table class="bootstrap-table">
+                            <thead>
+                                <tr>
+                                    <th class="w5">ID</th>
+                                    <th>Concepto</th>
+                                    <th>Valor Original</th>
+                                    <th class="w5"></th>
+                                    <th>Valor con Cargos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="w5"><input class="left" type="text" name="" id="" value="1" disabled></td>
+                                    <td><input class="left" type="text" name="" id="" value="VALOR EFECTIVO" disabled></td>
+                                    <td><input type="text" name="" id="" class="right" value="1,000.00"></td>
+                                    <td class="w5"><input type="button" name="" id="" value=""></td>
+                                    <td><input class="right gray" type="text" name="" id="" value="1,000.00"></td>
+                                </tr>
+                                <tr>
+                                    <td class="w5"><input class="left" type="text" name="" id="" value="2" disabled></td>
+                                    <td><input class="left" type="text" name="" id="" value="CHEQUES PROPIOS" disabled></td>
+                                    <td><input type="text" name="" id="" class="right" value="1,000.00"></td>
+                                    <td class="w5"></td>
+                                    <td><input class="right gray" type="text" name="" id="" value=""></td>
+                                </tr>
+                                <tr>
+                                    <td class="w5"><input class="left" type="text" name="" id="" value="3" disabled></td>
+                                    <td><input class="left" type="text" name="" id="" value="CHEQUES LOCALES" disabled></td>
+                                    <td><input type="text" name="" id="" class="right" value="1,000.00"></td>
+                                    <td class="w5"><input class="input-desglose" type="button" data-container="#desglose-monedas" name="" id="" value=""></td>
+                                    <td><input class="right gray" type="text" name="" id="" class="right" value="1,000.00"></td>
+                                </tr>
+                                <tr>
+                                    <td class="w5"><input class="left" type="text" name="" id="" value="4" disabled></td>
+                                    <td><input class="left" type="text" name="" id="" value="CHEQUES EXTERIOR" disabled></td>
+                                    <td><input type="text" name="" id="" class="right" value="1,000.00"></td>
+                                    <td class="w5"></td>
+                                    <td><input class="right gray" type="text" name="" id="" class="right" value="1,000.00"></td>
+                                </tr>
+                                <tr>
+                                    <td class="w5"></td>
+                                    <td><input class="left" type="text" name="" id="" value="TOTAL" disabled></td>
+                                    <td><input type="text" name="" id="" class="right" value="1,000.00"></td>
+                                    <td class="w5"></td>
+                                    <td><input class="right gray" type="text" name="" id="" value=""></td>
+                                </tr>
+                                <tr>
+                                    <td class="w5"></td>
+                                    <td><input type="text" name="" id="" class="right imp" value="Total Crg / Com / Imp" disabled style="font-weight: 500;"></td>
+                                    <td><input type="text" name="" id="" class="right" value="1,000.00"></td>
+                                    <td class="w5"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="w5"></td>
+                                    <td><input type="text" name="" id="" class="right imp" value="Crg / Com / Imp Deducible" disabled></td>
+                                    <td><input type="text" name="" id="" class="right gray" value="1,000.00"></td>
+                                    <td class="w5"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="w5"></td>
+                                    <td><input type="text" name="" id="" class="right imp" value="Crg / Com / Imp Neto" disabled></td>
+                                    <td><input type="text" name="" id="" class="right gray" value=""></td>
+                                    <td class="w5"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="w5"></td>
+                                    <td><input class="left green" type="text" name="" id="" class="green" value="VALOR NETO" disabled></td>
+                                    <td><input type="text" name="" id="" class="right green" value="5,600.00"></td>
+                                    <td class="w5"></td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <div class="buttons-right">
+                            <input type="button" class="default outline big-notification" value="CANCELAR">
+                            <input type="button" class="default small-notification" value="DETALLE CARGOS" data-type="default">
+                            <input type="button" class="success small-notification" value="FINALIZAR" data-type="success">
+                        </div>
+                    </div>
+
+                    <div id="desglose-monedas">
+                        <table class="bootstrap-table">
+                            <thead>
+                                <tr>
+                                    <th class="w30">Tipo de Rubro</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="w30"><input type="text" name="" class="gray" id="" value="RUBRO VALOR EFECTIVO" style="margin-top: 9px;"></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="bootstrap-table">
+                            <thead>
+                                <tr>
+                                    <th>Moneda</th>
+                                    <th></th>
+                                    <th>Total Moneda</th>
+                                    <th>Cot Compra</th>
+                                    <th>Cot Venta</th>
+                                    <th>Total Moneda Cuenta</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="w10"><input class="center" type="text" class="center" name="" id="" value="2"></td>
+                                    <td class="w15"><input class="center" type="text" class="center" name="" id="" value="USD"></td>
+                                    <td><input type="text" class="right" name="" id="" value="451.54"></td>
+                                    <td><input type="text" class="right" name="" id="" value="3.24998"></td>
+                                    <td><input type="text" class="right" name="" id="" value="1.00000"></td>
+                                    <td><input type="text" class="right" name="" id="" value="1,500.00"></td>
+                                    <td><input class="input-desglose" type="button" data-container="#desglose-cheques" name="" id="" value=""></td>
+                                </tr>
+                                <tr>
+                                    <td class="w10"><input class="center" type="text" class="center" name="" id="" value=""></td>
+                                    <td class="w15"><input class="center" type="text" class="center" name="" id="" value=""></td>
+                                    <td><input type="text" class="right" name="" id="" value=""></td>
+                                    <td><input type="text" class="right" name="" id="" value=""></td>
+                                    <td><input type="text" class="right" name="" id="" value=""></td>
+                                    <td><input type="text" class="right" name="" id="" value=""></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+
+                        <div class="buttons-right">
+                            <input type="button" class="default outline big-notification" value="CANCELAR">
+                            <input type="button" class="success small-notification" value="CONTINUAR">
+                        </div>
+                    </div>
+
+                    <div id="desglose-cheques">
+
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="input-group">
+                                            <label for=""><span>Tipo de Rubro</span></label>
+                                            <input type="text" name="" class="gray" id="" value="RUBRO VALOR EFECTIVO">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-group">
+                                            <label for=""><span>Moneda</span></label>
+                                            <input type="text" class="gray" name="" id="" value="DOLARES">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <table class="bootstrap-table">
+                            <thead>
+                                <tr>
+                                    <th class="">Cuenta</th>
+                                    <th># Cheque</th>
+                                    <th>Dig. Ctrl Cheque</th>
+                                    <th class="w15">Banco</th>
+                                    <th></th>
+                                    <th>Loc.</th>
+                                    <th>Valor Cheque</th>
+                                    <th>Fec. Emisión</th>
+                                    <th>Valor en Cuenta</th>
+                                    <th>Ofic.</th>
+                                    <th>Dig. Ctrl Bco/Of/Cta</th>
+                                    <th>Mismo Titular</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class=""><input type="text" name="" id="" value="5667"></td>
+                                    <td class=""><input type="text" name="" id="" value="5667"></td>
+                                    <td class=""><input type="text" name="" id="" value="5667"></td>
+                                    <td class="w15"><input type="text" name="" id="" value="5667"></td>
+                                    <td class=""><input type="button" class="lupa" data-remodal-target="bancos" name="" id="" value=""></td>
+                                    <td class=""><input type="text" name="" id="" value="5667"></td>
+                                    <td class=""><input type="text" name="" id="" value="5667"></td>
+                                    <td class=""><input type="text" name="" id="" value="5667"></td>
+                                    <td class=""><input type="text" name="" id="" value="5667"></td>
+                                    <td class=""><input type="text" name="" id="" value="5667"></td>
+                                    <td class=""><input type="text" name="" id="" value="5667"></td>
+                                    <td class="right"><input type="checkbox" value="1" id="titular"><label for="titular"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class=""><input type="text" name="" id="" value=""></td>
+                                    <td class=""><input type="text" name="" id="" value=""></td>
+                                    <td class=""><input type="text" name="" id="" value=""></td>
+                                    <td class="w15"><input type="text" name="" id="" value=""></td>
+                                    <td class=""></td>
+                                    <td class=""><input type="text" name="" id="" value=""></td>
+                                    <td class=""><input type="text" name="" id="" value=""></td>
+                                    <td class=""><input type="text" name="" id="" value=""></td>
+                                    <td class=""><input type="text" name="" id="" value=""></td>
+                                    <td class=""><input type="text" name="" id="" value=""></td>
+                                    <td class=""><input type="text" name="" id="" value=""></td>
+                                    <td class="right"><input type="checkbox" value="1" id="titular2"><label for="titular2"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class="w15"><input type="text" class="green left" name="" id="" value="TOTAL" disabled></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""><input type="text" class="green" name="" id="" value="1,230.77" disabled></td>
+                                    <td class=""><input type="text" name="" id="" value="" disabled></td>
+                                    <td class=""><input type="text" class="green" name="" id="" value="4,000.77" disabled></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=" center"></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+
+                        <div class="buttons-right">
+                            <input type="button" class="default outline big-notification" value="CANCELAR">
+                            <input type="button" class="success small-notification" value="CONTINUAR">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Help modal -->
+    <div class="remodal" data-remodal-id="help">
+        <button data-remodal-action="cancel" class="remodal-cancel">+</button>
+        <div class="flex">
+            <div class="bg-img" style="background-image: url('./assets/support.png'); border-radius: 8px 0px 0px 8px; background-repeat: no-repeat; background-size: cover; background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url(./assets/support.png); background-position-x: 66%; background-position-y: 95%;">
+                <div class="help">
+                    <img src="assets/help@3x.png" class="img-help"><br>
+                    <span class="title-modal">Ayuda</span>
+                </div>
+
+                <div class="">
+                    <span class="text-modal">Recursos de ayuda<br> para usuarios de<br> FISA System.</span>
+                </div>
+
+            </div>
+
+            <div class="">
+                <div class="">
+                    <a href="">
+                        <span class="icon"> <img src="assets/test@2x.png" class="images-modal" alt=""></span>
+                        <span class="title-item-modal">Manual de Usuario</span>
+                    </a>
+                </div>
+                <div class="">
+                    <a href="">
+                        <span class="icon"> <img src="assets/chat@2x.png" class="images-modal"  alt=""></span>
+                        <span class="title-item-modal">Preguntas Frecuentes</span>
+                    </a>
+                </div>
+                <div class="">
+                    <a href="#soporte">
+
+                        <span class="icon"><br> <img src="assets/keyboard@2x.png" class="images-modal"  alt=""></span>
+                        <span class="title-item-modal">Accesos Directos</span>
+                    </a>
+                </div>
+                <div class="">
+                    <a href="">
+                        <span class="icon"> <img src="assets/antivirus@2x.png" class="images-modal"  alt=""></span>
+                        <span class="title-item-modal">Reporte un Error</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- News modal -->
+    <div class="remodal" data-remodal-id="news">
+        <div class="remodal-title">
+            <img src="./assets/ic_bookmark_24px.png" alt="">
+            <h2>Novedades</h2>
+            <button data-remodal-action="cancel" class="remodal-cancel">+</button>
+        </div>
+        <div class="flex">
+            <div class="bg-img" style="background-image: url('./assets/news.png'); border-radius: 8px 0px 0px 8px;    background-size: cover;">
+
+            </div>
+
+            <div class="">
+                <h1>La nueva versión de FISA System permite a los usuarios una mejor experiencia y fácil acceso a las transacciones más usadas según su rol.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum lectus eu diam convallis, non placerat massa tristique. Nullam non fringilla ante. Suspendisse a malesuada lectus. Ut ac viverra mi, sit amet congue risus. Suspendisse
+                    sit amet luctus enim, vel varius nisi. Duis sem ipsum, lacinia sed leo ut, sollicitudin consequat dui. Morbi varius vitae mauris vitae accumsan. Curabitur vel justo efficitur, pretium est non, fringilla est. Fusce lacinia aliquet orci,
+                    ac finibus nisl dapibus a. Maecenas consectetur convallis accumsan. In et turpis sit amet tellus maximus finibus sit amet sed sem. Proin at euismod nunc.</p>
+                <a href="">www.fisasystem.com/blog/novedades/enero-2019</a>
+                <p class="right">
+                    <input type="button" class="default outline" data-remodal-action="cancel" value="Cerrar">
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Configuration modal -->
+    <div class="remodal" data-remodal-id="configuration">
+        <div class="remodal-title">
+            <img src="./assets/ic_dashboard_24px.png" alt="">
+            <h2>Configurar Dashboard</h2>
+            <button data-remodal-action="cancel" class="remodal-cancel">+</button>
+        </div>
+        <h3>Widgets</h3>
+        <div class="flex">
+            <div>
+                <h4>Widget 1</h4>
+                <select name="" id="">
+                    <option value="Transacciones más usadas">Transacciones más usadas</option>
+                    <option value="Transacciones menos usadas">Transacciones menos usadas</option>
+                </select>
+                <p>Este widget muestra las transacciones disponibles según el rol más usadas por el usuario.</p>
+            </div>
+            <div>
+                <h4>Widget 2</h4>
+                <select name="" id="">
+                    <option value="Transacciones más usadas">Transacciones recientes</option>
+                    <option value="Transacciones menos usadas">Transacciones menos usadas</option>
+                </select>
+                <p>Este widget muestra las transacciones más últimas transacciones realizadas por el usuario.</p>
+            </div>
+            <div>
+                <h4>Widget 3</h4>
+                <select name="" id="">
+                    <option value="Transacciones más usadas">Soporte</option>
+                    <option value="Transacciones menos usadas">Transacciones menos usadas</option>
+                </select>
+                <p>Este widget muestra información de Soporte para el usuario.</p>
+            </div>
+            <div>
+                <h4>Widget 4</h4>
+                <select name="" id="">
+                    <option value="Transacciones más usadas">Novedades</option>
+                    <option value="Transacciones menos usadas">Transacciones menos usadas</option>
+                </select>
+                <p>Este widget muestra novedades relacionadas a FISA System, actualizaciones, entre otros.</p>
+            </div>
+
+        </div>
+        <div class="right">
+            <input type="button" class="default outline iziToast-buttons-child revealIn" data-remodal-action="cancel" value="Cancelar">
+            <input type="button" class="success iziToast-buttons-child revealIn" data-remodal-action="cancel" value="Aceptar">
+        </div>
+    </div>
+
+
+    <!-- Soporte modal -->
+    <div class="remodal" data-remodal-id="soporte">
+        <div class="remodal-title">
+            <img src="./assets/keyboard.png" alt="">
+            <h2>Accesos Directos</h2>
+            <button data-remodal-action="cancel" class="remodal-cancel">+</button>
+        </div>
+        <div class="flex">
+            <div>
+                <ul>
+                    <li><span>Tab</span> ó <span>&#x21A9;</span> Ir de un campo a otro</li>
+                    <li><span>Shift</span> + <span>Tab</span> Regresar al campo anteior</li>
+                    <li><small></small><span class="small">Page Up</span> Regresar al bloque anterior</li>
+                    <li><small></small><span class="small">Page Down</span> Ir al siguiente bloque</li>
+                    <li><small></small><span>↓</span> Buscar registros hacia abajo</li>
+                    <li><small></small><span>↑</span> Buscar registros hacia arriba</li>
+                    <li><span>Ctrl</span> + <span class="small">Page Up</span> Avance de página hacia arriba</li>
+                    <li><span>Ctrl</span> + <span class="small">Page Down</span> Avance de página hacia abajo</li>
+                    <li><span>Ctrl</span> + <span>U</span> Borra campos durante un ingreso</li>
+                    <li><span>Ctrl</span> + <span>H</span> Buscar el dígito verificador</li>
+                    <li><span>Shift</span> + <span>F6</span> Eliminar registros</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><span>F1</span> Ayuda de FISA-System</li>
+                    <li><span>F3</span> Insertar el registro de la línea superior</li>
+                    <li><span>F4</span> Insertar toda la línea superior</li>
+                    <li><span>F5</span> Despliega los bloques de la transacción</li>
+                    <li><span>F6</span> Insertar un nuevo registro</li>
+                    <li><span>F7</span> Borrar el registro</li>
+                    <li><span>F8</span> Desplegar una consulta</li>
+                    <li><span>F9</span> Lista de Valores</li>
+                    <li><span>F10</span> Graba la transacción</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bancos modal -->
+    <div class="remodal" data-remodal-id="bancos">
+        <div class="remodal-title">
+            <img src="./assets/ic_monetization_on_24px.png" alt="">
+            <h2>Bancos</h2>
+            <button data-remodal-action="cancel" class="remodal-cancel">+</button>
+        </div>
+        <div>
+            <input type="search" name="" placeholder="Buscar Banco" id="">
+            <ul>
+                <li><a href="">1. BANCO DE CREDITO DEL PERU</a></li>
+                <li><a href="">2. BANCO INTERNACIONAL DEL PERU</a></li>
+                <li><a href="">3. BANCO SCOTIABANK</a></li>
+                <li><a href="">4. BANCO CONTINENTAL</a></li>
+                <li><a href="">5. BANCO STANDARD CHARTERED</a></li>
+                <li><a href="">6. BOVEDA</a></li>
+                <li><a href="">7. BANCO DE COMERCIO</a></li>
+                <li><a href="">8. BOVEDA PROSEFUIR</a></li>
+                <li><a href="">9. BANCO RIPLEY PERU</a></li>
+                <li><a href="">10. BANCO DE CREDITO DEL PERU</a></li>
+                <li><a href="">11. BANCO INTERNACIONAL DEL PERU</a></li>
+                <li><a href="">12. BANCO SCOTIABANK</a></li>
+                <li><a href="">13. BANCO CONTINENTAL</a></li>
+                <li><a href="">14. BANCO STANDARD CHARTERED</a></li>
+                <li><a href="">15. BOVEDA</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+/*This layout have a normalize.css styles*/
+
+
+/*Import color variables*/
+
+@import "colors";
+
+/*General Styles*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $fondo;
+    color: $grisO;
+}
+
+.fullHeight {
+    height: 100vh;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    &.betweenH {
+        justify-content: space-between;
+    }
+    &.betweenV {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.logo {
+    max-width: 163px;
+}
+
+input[type="button"] {
+    margin: 5px;
+    padding: 8px 13px;
+    border-radius: 6px;
+    background-color: $moradoO;
+    border: 2px solid $grisO;
+    color: $white;
+    cursor: pointer;
+    font-weight: bold;
+    &.default {
+        background-color: $moradoO;
+        border: 2px solid $moradoO;
+        &.outline {
+            background-color: transparent;
+            border: 2px solid $moradoO;
+            color: $moradoO;
+        }
+    }
+    &.success {
+        background-color: $verde;
+        border: 2px solid $verde;
+        &.outline {
+            background-color: transparent;
+            border: 2px solid $verde;
+            color: $verde;
+        }
+        &.invert {
+            color: white;
+            border: 2px solid $white;
+        }
+    }
+}
+
+.buttons-right {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 8px;
+}
+
+input.button-icon {
+    background-color: $verde;
+    &.layers {
+        background-image: url(../assets/layers.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.login {
+    >div:first-child {
+        flex: 1 1 986px;
+        background-image: url(../assets/Image17@2x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        img {
+            margin: 20px 30px;
+            width: 143px;
+        }
+        h1 {
+            font-size: 56px;
+            color: $white;
+            font-weight: 100;
+            margin: 20px 90px;
+        }
+        h2 {
+            margin: 20px 30px;
+            color: #C46E9A;
+            font-size: 12px;
+        }
+    }
+    >div:last-child {
+        flex: 1 1 380px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $white;
+        >div {
+            padding: 0px 40px;
+            h1 {
+                font-size: 32px;
+                font-weight: 100;
+                color: $moradoO;
+            }
+            label {
+                display: block;
+                font-size: 14px;
+                color: $moradoO;
+                margin-bottom: 12px;
+            }
+            input[type="text"],
+            input[type="password"] {
+                margin-bottom: 30px;
+                background-color: $white;
+                padding: 16px;
+                color: $moradoO;
+                border-radius: 6px;
+                border: 1px solid $grisO;
+                width: 100%;
+                display: block;
+                max-width: -webkit-fill-available;
+            }
+            label[for="recordar"] {
+                font-size: 14px;
+                font-weight: bold;
+                color: $moradoO;
+                cursor: pointer;
+            }
+            input[type="checkbox"] {
+                display: none;
+                +label {
+                    background-image: url(../assets/checkbox_on_gray.png);
+                    background-position: left top;
+                    background-repeat: no-repeat;
+                    height: 18px;
+                    width: 18px;
+                    display: inline-block;
+                    padding: 0 0 0 0px;
+                    margin: -3px 11px -3px 0px;
+                }
+                &:checked {
+                    +label {
+                        background-image: url(../assets/checkbox_on_dark.png);
+                        background-position: left top;
+                        background-repeat: no-repeat;
+                        height: 18px;
+                        width: 18px;
+                        display: inline-block;
+                        padding: 0 0 0 0px;
+                        margin: -3px 11px -3px 0px;
+                    }
+                }
+            }
+            input[type="submit"] {
+                background-color: $verde;
+                color: $white;
+                padding: 15px;
+                font-size: 16px;
+                font-weight: bold;
+                border: none;
+                border-radius: 6px;
+                margin-top: 50px;
+                cursor: pointer;
+                width: 100%;
+                height: 45px;
+            }
+            a {
+                padding: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+//IE10 Styles
+@media screen\0 {
+    .flex {
+        &.betweenV {
+            width: 10%;
+            -webkit-box-flex: 1;
+            -moz-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+        }
+        >div:last-child {
+            width: 35%;
+            >div {
+                margin-top: 33%;
+                input[type="text"],
+                input[type="password"] {
+                    width: 94%;
+                }
+            }
+        }
+    }
+    .login {
+        >div:first-child {
+            img {
+                height: 30px;
+                width: 143px;
+            }
+            h1 {
+                margin-bottom: 400px;
+                bottom: 250px;
+                left: 0;
+                top:250px;
+                position: absolute;
+            }
+            h2 {
+                bottom: 0;
+                left: 0;
+                position: absolute;
+            }
+        }
+    }
+}
